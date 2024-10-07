@@ -1,9 +1,8 @@
-import { GetServerSideProps } from "next";
 import dynamic from "next/dynamic";
 const fs = require('fs');
 const path = require('path');
 
-export const getServer = async () => {
+const getFile = async () => {
 
   const componentsDir = path.join(process.cwd(), '/page/example');
   const files = fs.readdirSync(componentsDir);
@@ -15,7 +14,7 @@ export const getServer = async () => {
 
 
 const Ui = async () => {
-  const { files } = await getServer()
+  const { files } = await getFile()
   const UiPage = dynamic(() => import("@/page/Ui"))
   return (
     <section className="container">
