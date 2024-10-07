@@ -34,7 +34,7 @@ export default function UiPage({ links }: { links: string[] }) {
 
 const Dashboard = () => {
   const router = useSearchParams();
-  const view = router.get('view');
+  const view = router.get('view') ?? 'button';
 
   const Component = dynamic(() =>
     import(`@/page/example/${view?.toLowerCase()}`)
