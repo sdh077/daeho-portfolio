@@ -57,9 +57,9 @@ const Work = () => {
         opacity: 1,
         transition: { delay: 2.4, duration: 0.4, ease: 'easeInOut' }
       }}
-      className="min-h-[80vh] flex flex-col justify-center py-12 lg:px-0"
+      className="min-h-[80vh] flex flex-col justify-center py-12 lg:px-0 w-full"
     >
-      <div className="w-full lg:container mx-auto">
+      <div className="w-screen lg:container mx-auto">
         <div className="flex flex-col lg:flex-row lg:gap-[30px]">
           <div className="w-full lg:w-[50%] lg:h-[460px] flex flex-col lg:justify-between order-2 lg:order-none">
             <div className="flex flex-col gap-[30px] h-[50%]">
@@ -108,7 +108,7 @@ const Work = () => {
               onSlideChange={handleSlideChange}
             >
               {projects.map(project =>
-                <SwiperSlide key={project.num} className="w-full">
+                <SwiperSlide key={project.num} className="w-full" >
                   <div className="h-[460px] relative group flex justify-center items-center bg-pink-50/20">
                     <div className="absolute top-0 bottom-0 w-full h-full bg-black/10 z-10"></div>
                     <div className="relative w-full h-full">

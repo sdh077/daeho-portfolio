@@ -39,7 +39,7 @@ const about = {
 const experience = {
   icon: '',
   title: 'My expericence',
-  description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa, facilis!',
+  description: '',
   items: [
     {
       company: '어반데이터',
@@ -47,30 +47,20 @@ const experience = {
       duration: '2023.10~2024.01'
     },
     {
-      company: '',
-      position: '',
-      duration: '',
+      company: '히포티앤씨',
+      position: 'Front End Developer',
+      duration: '2023.02~2024.08 ',
     },
     {
-      company: '',
-      position: '',
-      duration: '',
+      company: '플레이오토',
+      position: 'Software Developer',
+      duration: '2019.03~2021.04',
     },
     {
-      company: '',
-      position: '',
-      duration: '',
+      company: '이츠엠',
+      position: 'Full Stack Developer',
+      duration: '2016.08~2017.07',
     },
-    {
-      company: '',
-      position: '',
-      duration: '',
-    },
-    {
-      company: '',
-      position: '',
-      duration: '',
-    }
   ]
 }
 const education = {

@@ -1,7 +1,8 @@
 'use client'
 
 import { motion } from 'framer-motion'
-import Image from 'next/image'
+import dynamic from "next/dynamic"
+const ComputersCanvas = dynamic(() => import('@/components/ui/canvas/Compouter'))
 
 const Photo = () => {
   return (
@@ -21,7 +22,8 @@ const Photo = () => {
             transition: { delay: 2.4, duration: 0.4, ease: "easeInOut" }
           }}
           className='w-[298px] h-[298px] lg:w-[398px] lg:h-[398px] mix-blend-lighten absolute'>
-          <Image src={'/about.png'} alt='' priority quality={50} fill className='object-contain' />
+          {/* <Image src={'/about.png'} alt='' priority quality={50} fill className='object-contain' /> */}
+          <ComputersCanvas />
         </motion.div>
 
         {/* circle */}
