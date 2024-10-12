@@ -3,7 +3,6 @@ import { Environment, OrbitControls } from "@react-three/drei";
 import { Canvas } from "@react-three/fiber";
 import clsx from "clsx";
 import React, { Suspense } from "react";
-
 const RenderModel = ({ children, className }: { children: React.ReactNode, className?: string }) => {
   return (
     <Canvas

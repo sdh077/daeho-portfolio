@@ -3,6 +3,7 @@ import localFont from "next/font/local";
 import "./globals.css";
 import { JetBrains_Mono } from 'next/font/google'
 import Provider from "./provider";
+import AnalyticsComponent from './analytics'
 const jetbrainsMono = JetBrains_Mono({
   subsets: ["latin"],
   weight: ["100", "200", "300", "400", "500", "600", "700", "800"],
@@ -22,6 +23,7 @@ const geistMono = localFont({
 export const metadata: Metadata = {
   title: "Shin Daeho's Portfolio",
   description: "Modern & Minimal",
+  keywords: ['프론트엔드 포트폴리오']
 };
 
 export default function RootLayout({
@@ -37,6 +39,7 @@ export default function RootLayout({
         <Provider>
           {children}
         </Provider>
+        <AnalyticsComponent />
       </body>
     </html>
   );
