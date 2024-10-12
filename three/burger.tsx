@@ -32,7 +32,7 @@ export function BurgerModel({ ...props }) {
   }, [])
   return (
     <>
-      <group ref={group} {...props} dispose={null} position={[1, 1, 1]} rotation={[0.25, 0, 0]}>
+      {/* <group ref={group} {...props} dispose={null} position={[1, 1, 1]} rotation={[0.25, 0, 0]}>
         <group name="Sketchfab_Scene">
           <group name="Sketchfab_model" rotation={[-Math.PI / 2, 0, 0]}>
             <group name="����������������������_animationfbx" rotation={[Math.PI / 2, 0, 0]} scale={0.01}>
@@ -111,7 +111,7 @@ export function BurgerModel({ ...props }) {
             </group>
           </group>
         </group>
-      </group>
+      </group> */}
       <group >
         <mesh position={[-1, -1, 1]}>
           {price}

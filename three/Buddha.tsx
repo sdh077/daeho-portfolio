@@ -16,7 +16,7 @@ export function BuddhaModel({ ...props }) {
   const { nodes, materials } = useGLTF('/gltf/buddha-transformed.glb')
   return (
     <group {...props} dispose={null} scale={[6, 6, 6]}>
-      <mesh geometry={nodes.Object_2.geometry} material={materials['1950.86_Buddha_of_the_Future_Mats']} rotation={[-Math.PI / 2, 0, Math.PI / 2]} />
+      {/* <mesh geometry={nodes.Object_2.geometry} material={materials['1950.86_Buddha_of_the_Future_Mats']} rotation={[-Math.PI / 2, 0, Math.PI / 2]} /> */}
     </group>
   )
 }
