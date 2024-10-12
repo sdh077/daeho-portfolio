@@ -11,7 +11,9 @@ export default function Layout({
 }>) {
   return (
     <div>
-      <Header />
+      <div className='sticky top-0 z-50 bg-black'>
+        <Header />
+      </div>
       <StairTransition />
       <PageTransition>
         {children}

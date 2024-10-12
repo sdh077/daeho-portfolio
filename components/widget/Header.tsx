@@ -35,7 +35,7 @@ const links: LinkType[] = [
 
 const Header = () => {
   return (
-    <header className='py-8 xl:py-12 text-white'>
+    <header className='py-2 xl:py-4 text-white'>
       <div className='container mx-auto flex justify-between items-center'>
         <Link href={'/'}>
           <h1 className='text-4xl font-semibold'>
@@ -44,9 +44,6 @@ const Header = () => {
         </Link>
         <div className="hidden lg:flex items-center gap-8">
           <Nav links={links} />
-          <Link href={'/contact'}>
-            <Button>Hire me</Button>
-          </Link>
         </div>
 
         <div className="lg:hidden ">

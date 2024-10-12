@@ -1,4 +1,4 @@
-import { Input } from '@/components/ui/input'
+import { Input } from '@/components/ui/input2'
 import { Button } from '@/components/ui/button'
 import React from 'react'
 

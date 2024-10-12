@@ -17,7 +17,7 @@ const Ui = async () => {
   const { files } = await getFile()
   const UiPage = dynamic(() => import("@/page/Ui"))
   return (
-    <section className="container h-screen overflow-y-scroll">
+    <section className="bg-neutral-800 ">
       <UiPage links={files} />
     </section>
   )

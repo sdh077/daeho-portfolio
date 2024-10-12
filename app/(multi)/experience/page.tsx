@@ -1,14 +1,20 @@
 import About from '@/page/About'
-import Services from '@/page/Services'
 import Work from '@/page/Work'
+import Job, { JobType } from './job'
 
 
-const Experience = () => {
+const Experience = ({
+  params,
+  searchParams,
+}: {
+  params: { slug: string }
+  searchParams: { [key: string]: string | string[] | undefined }
+}) => {
   return (
-    <section className='min-h-[80vh] flex flex-col justify-center py-12 lg:py-0 w-full'>
-      <Services />
-      <Work />
+    <section className='flex flex-col justify-center lg:py-0 w-full gap-16'>
+      <Job type={searchParams.type as JobType ?? 'grid'} />
       <About />
+      {/* <Work /> */}
     </section>
   )
 }

@@ -8,16 +8,8 @@ const stats = [
     text: "Year of experience"
   },
   {
-    num: 26,
-    text: "Projects Complete"
-  },
-  {
-    num: 8,
-    text: "Tech"
-  },
-  {
-    num: 500,
-    text: "Code"
+    num: 4,
+    text: "Certification"
   }
 ]
 

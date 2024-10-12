@@ -89,7 +89,7 @@ export const DesktopSidebar = ({
     <>
       <motion.div
         className={cn(
-          "h-full px-4 py-4 hidden  sm:flex md:flex-col bg-neutral-100 dark:bg-neutral-800 w-[150px] flex-shrink-0",
+          "h-full px-4 py-4 hidden  sm:flex md:flex-col flex-shrink-0",
           className
         )}
         {...props}
@@ -112,14 +112,14 @@ export const MobileSidebar = ({
     <>
       <div
         className={cn(
-          "h-10 px-4 py-4 flex flex-row sm:hidden  items-center justify-between bg-neutral-100 dark:bg-neutral-800 w-full"
+          "h-10 px-4 py-4 flex flex-row sm:hidden  items-center justify-between bg-neutral-200 w-full"
         )}
         {...props}
       >
         <div className="flex justify-between z-20 w-full">
           <div className="text-primary">{searchParams.get('view')}</div>
           <IconMenu2
-            className="text-neutral-800 dark:text-neutral-200"
+            className="text-neutral-800"
             onClick={() => setOpen(!open)}
           />
         </div>
@@ -134,12 +134,12 @@ export const MobileSidebar = ({
                 ease: "easeInOut",
               }}
               className={cn(
-                "fixed h-full w-full inset-0 bg-white dark:bg-neutral-900 p-10 z-[100] flex flex-col justify-between",
+                "fixed h-full w-full inset-0 text-neutral-800 bg-neutral-900 p-10 z-[100] flex flex-col justify-between",
                 className
               )}
             >
               <div
-                className="absolute right-10 top-10 z-50 text-neutral-800 dark:text-neutral-200"
+                className="absolute right-10 top-10 z-50 text-neutral-100"
                 onClick={() => setOpen(!open)}
               >
                 <IconX />
@@ -167,7 +167,7 @@ export const SidebarLink = ({
     <Link
       href={link.href}
       className={cn(
-        "flex items-center justify-start gap-2  group/sidebar py-2 text-neutral-700",
+        "flex items-center justify-start gap-2  group/sidebar py-2 text-neutral-100",
         className
       )}
       {...props}

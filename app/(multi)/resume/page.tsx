@@ -15,6 +15,10 @@ const about = {
       fieldValue: 'Shin Daeho',
     },
     {
+      fieldName: 'Education',
+      fieldValue: 'Handong University',
+    },
+    {
       fieldName: 'Phone',
       fieldValue: '010-6256-6164',
     },
@@ -27,7 +31,7 @@ const about = {
       fieldValue: 'sdh077@naver.com',
     },
     {
-      fieldName: 'Home',
+      fieldName: 'Address',
       fieldValue: '서울시 동대문구 한천로',
     },
     {
@@ -61,23 +65,6 @@ const experience = {
       position: 'Full Stack Developer',
       duration: '2016.08~2017.07',
     },
-  ]
-}
-const education = {
-  icon: '',
-  title: 'My expericence',
-  description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa, facilis!',
-  items: [
-    {
-      institution: '',
-      position: '',
-      duration: '',
-    },
-    {
-      company: '',
-      position: '',
-      duration: '',
-    }
   ]
 }
 const skills = {
@@ -138,7 +125,6 @@ const Resume = () => {
           className='flex flex-col lg:flex-row gap-[60px]'>
           <TabsList className='flex flex-col w-full max-w-[380px] mx-auto lg:mx-0'>
             <TabsTrigger value='experience'>Experience</TabsTrigger>
-            <TabsTrigger value='education'>Education</TabsTrigger>
             <TabsTrigger value='skills'>Skills</TabsTrigger>
             <TabsTrigger value='about'>About me</TabsTrigger>
           </TabsList>
@@ -165,7 +151,6 @@ const Resume = () => {
                 </ScrollArea>
               </div>
             </TabsContent>
-            <TabsContent className='w-full' value='education'>{education.title}</TabsContent>
             <TabsContent className='w-full' value='skills'>
               <div className='flex flex-col gap-[30px]'>
                 <div className='flex flex-col gap-[30px] text-center lg:text-left'>

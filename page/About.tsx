@@ -84,7 +84,7 @@ const About = () => {
           ease: 'easeIn'
         }
       }}
-      className='flex items-center justify-center py-12 lg:py-0 flex-col w-full'
+      className='grid md:grid-cols-2 gap-8 mt-16 items-center justify-center pb-12  w-full'
     >
       <div className='flex flex-col gap-[30px] w-full mb-8'>
         <ul className='grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-8'>

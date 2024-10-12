@@ -5,12 +5,12 @@ const nextConfig = {
     remotePatterns: [
       {
         protocol: 'https',
-        hostname: 'search.pstatic.net',
+        hostname: 'images.unsplash.com',
         port: '',
         pathname: '/**',
       }, {
         protocol: 'https',
-        hostname: 'ldb-phinf.pstatic.net',
+        hostname: 'via.placeholder.com',
         port: '',
         pathname: '/**',
       }, {

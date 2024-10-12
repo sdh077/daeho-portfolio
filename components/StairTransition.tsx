@@ -10,9 +10,15 @@ const StairTransition = () => {
       mode='wait'
     >
       <div key={pathname}>
-        <div className='h-screen w-screen fixed top-0 left-0 pointer-events-none z-40 flex'>
+        <motion.div className='h-screen w-screen fixed top-0 left-0 pointer-events-none z-40 flex'
+          initial={{ opacity: 1 }}
+          animate={{
+            opacity: 0,
+            transition: { delay: 2.4, duration: 0, ease: "easeInOut" }
+          }}
+        >
           <Stairs />
-        </div>
+        </motion.div>
 
         <motion.div
           className='h-screen w-screen fixed bg-primary top-0 pointer-events-none'
