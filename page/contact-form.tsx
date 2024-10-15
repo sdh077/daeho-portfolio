@@ -66,14 +66,8 @@ const ContactForm = () => {
       }
 
       const result = await response.json();
-      console.log(result)
       toast({
-        title: "You submitted the following values:",
-        description: (
-          <pre className="mt-2 w-[340px] rounded-md bg-slate-950 p-4">
-            <code className="text-white">{JSON.stringify(data, null, 2)}</code>
-          </pre>
-        ),
+        title: `${data.name}님 감사합니다 확인 후 연락드리겠습니다`
       })
     } catch (error) {
       console.error('Error submitting form:', error);
@@ -103,7 +97,7 @@ const ContactForm = () => {
             name="email"
             render={({ field }) => (
               <FormItem>
-                <FormLabel>Username</FormLabel>
+                <FormLabel>email</FormLabel>
                 <FormControl>
                   <Input type="email" placeholder="이메일을 입력해주세요" {...field} />
                 </FormControl>
@@ -116,7 +110,7 @@ const ContactForm = () => {
             name="phone"
             render={({ field }) => (
               <FormItem>
-                <FormLabel>Username</FormLabel>
+                <FormLabel>phone</FormLabel>
                 <FormControl>
                   <Input type="" placeholder="연락처를 입력해주세요" {...field} />
                 </FormControl>

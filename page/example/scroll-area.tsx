@@ -11,6 +11,8 @@ const scrollAreaExample = () => {
       Jokester were so funny that they couldn't help but laugh. And once they
       started laughing, they couldn't stop.
       Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa veritatis quod adipisci nesciunt earum deserunt deleniti facere nihil doloremque, voluptatem ipsum fugiat totam facilis consequatur incidunt consectetur magni recusandae magnam.
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa veritatis quod adipisci nesciunt earum deserunt deleniti facere nihil doloremque, voluptatem ipsum fugiat totam facilis consequatur incidunt consectetur magni recusandae magnam.
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa veritatis quod adipisci nesciunt earum deserunt deleniti facere nihil doloremque, voluptatem ipsum fugiat totam facilis consequatur incidunt consectetur magni recusandae magnam.
     </ScrollArea>
   )
 }

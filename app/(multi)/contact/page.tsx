@@ -1,8 +1,4 @@
-import { Button } from "@/components/ui/button"
-import { Input } from "@/components/ui/input2"
-import { Textarea } from "@/components/ui/textarea"
 
-import { Select, SelectContent, SelectGroup, SelectItem, SelectLabel, SelectTrigger, SelectValue } from "@/components/ui/select"
 
 import { FaPhoneAlt, FaEnvelope, FaMapMarkedAlt } from 'react-icons/fa'
 import * as motion from 'framer-motion/client'
@@ -37,7 +33,7 @@ const Contact = () => {
           <div className="lg:w-[54%] order-2 lg:order-none">
             <ContactForm />
           </div>
-          <div className="sticky top-20 flex-1 flex items-center lg:justify-center order-1 lg:order-none mb-8 lg:mb-0">
+          <div className="lg:sticky top-20 flex-1 flex items-center lg:justify-center order-1 lg:order-none mb-8 lg:mb-0">
             <ul className="flex flex-col gap-10">
               {info.map((item, idx) =>
                 <li key={idx} className="flex items-center gap-6">

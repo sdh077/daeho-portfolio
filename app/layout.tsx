@@ -4,6 +4,7 @@ import "./globals.css";
 import { JetBrains_Mono } from 'next/font/google'
 import Provider from "./provider";
 import AnalyticsComponent from './analytics'
+import { Toaster } from "@/components/ui/toaster";
 const jetbrainsMono = JetBrains_Mono({
   subsets: ["latin"],
   weight: ["100", "200", "300", "400", "500", "600", "700", "800"],
@@ -39,6 +40,7 @@ export default function RootLayout({
         <Provider>
           {children}
         </Provider>
+        <Toaster />
         <AnalyticsComponent />
       </body>
     </html>
