@@ -6,7 +6,7 @@ import { FaFileDownload } from "react-icons/fa"
 
 const Profile = () => {
   return (
-    <div className="container mx-auto h-full">
+    <div className="container mx-auto">
       <div className="flex flex-col lg:flex-row items-center justify-between lg:pt-8 lg:pb-24">
         <div className="text-center lg:text-left order-2 lg:order-none">
           <span className="text-xl">Software Developer</span>

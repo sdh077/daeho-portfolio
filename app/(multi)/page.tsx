@@ -1,13 +1,15 @@
 import Profile from "@/page/Profile"
+import Project from "@/page/Project";
 import Stats from "@/page/Stats"
-import dynamic from 'next/dynamic';
-
 
 const Page = () => {
   return (
     <section className="">
-      <Profile />
-      <Stats />
+      <div className="h-screen flex flex-col">
+        <Profile />
+        <Stats />
+      </div>
+      <Project />
     </section>
   )
 }

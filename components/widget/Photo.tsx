@@ -3,6 +3,7 @@
 import { motion } from 'framer-motion'
 import dynamic from "next/dynamic"
 const ComputersCanvas = dynamic(() => import('@/components/canvas/Computer'))
+// const SoldierCanvas = dynamic(() => import('@/three/Soldier'))
 
 const Photo = () => {
   return (
