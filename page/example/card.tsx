@@ -4,7 +4,6 @@ import { CanvasRevealEffect } from '@/components/effect-ui/CanvasRevealEffect';
 import Image from "next/image";
 import { CardBody, CardContainer, CardItem } from "@/components/effect-ui/3d-card";
 import Link from "next/link";
-import Card from '@/components/ui/card';
 import {
   useQueryClient,
   useQuery,
@@ -13,6 +12,7 @@ import {
 import { FocusCards } from '@/components/ui/focus-card';
 import { Photo } from '@/interface/photo';
 import usePhotoStore from '@/stores/photo-store';
+import Card from '@/components/ui/card';
 
 const cards = [
   {
