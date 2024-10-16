@@ -11,7 +11,7 @@ export default function Layout({
 }>) {
   return (
     <div>
-      <div className='fixed w-full top-0 z-50 bg-primary'>
+      <div className='fixed w-full top-0 z-50'>
         <Header />
       </div>
       <div className='h-16' />

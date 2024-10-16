@@ -1,7 +1,7 @@
 import React from 'react'
 import dynamic from "next/dynamic"
-const ComputersCanvas = dynamic(() => import('@/components/ui/canvas/Compouter'))
-const Car = dynamic(() => import('@/components/ui/canvas/Car'))
+const ComputersCanvas = dynamic(() => import('@/components/canvas/Computer'))
+const Car = dynamic(() => import('@/components/canvas/Car'))
 
 const three = () => {
   return (

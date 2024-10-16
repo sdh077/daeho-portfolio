@@ -36,11 +36,12 @@ const config = {
 		},
 		extend: {
 			colors: {
-				primary: '#1c1c22',
+				font: { DEFAULT: 'var(--color-font)', black: 'var(--color-font-black)' },
+				background: 'var(--color-background)',
+				primary: 'var(--color-primary)',
 				accent: {
-					DEFAULT: '#00ff99',
-					hover: '#00e187',
-
+					DEFAULT: 'var(--color-accent)',
+					hover: 'var(--color-accent-hover)',
 				}
 			},
 			borderRadius: {

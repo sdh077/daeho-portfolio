@@ -4,6 +4,7 @@ import Nav from './Nav';
 import { Button } from '../ui/button';
 import MobileNav from './MobileNav';
 import Logo from './Logo';
+import { ModeToggle } from './mode-toggle';
 
 export type LinkType = {
   name: string;
@@ -35,22 +36,23 @@ const links: LinkType[] = [
 
 const Header = () => {
   return (
-    <header className='py-2 xl:py-4 text-white'>
+    <header className='py-2 xl:py-4 bg-background'>
       <div className='container mx-auto flex justify-between items-center'>
         <Link href={'/'}>
           <h1 className='text-4xl font-semibold'>
             <Logo />
           </h1>
         </Link>
-        <div className="hidden lg:flex items-center gap-8">
-          <Nav links={links} />
-        </div>
+        <div className='flex gap-8'>
+          <div className="hidden lg:flex items-center gap-8">
+            <Nav links={links} />
+          </div>
 
-        <div className="lg:hidden ">
-          <MobileNav links={links} />
+          <div className="lg:hidden ">
+            <MobileNav links={links} />
+          </div>
         </div>
       </div>
-
     </header>
   )
 }

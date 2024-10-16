@@ -3,7 +3,7 @@ import { Menu, MenuItem, HoveredLink, ProductItem } from '@/components/ui/navbar
 import { cn } from '@/lib/utils';
 import { FloatingNav } from '@/components/effect-ui/FloatingNav';
 import Header from '@/components/widget/Header';
-import CodeDisplay from '@/components/ui/code-highlight';
+import CodeDisplay from '@/components/code-highlight';
 function Navbar({ className }: { className?: string }) {
   const [active, setActive] = useState<string | null>(null);
   return (

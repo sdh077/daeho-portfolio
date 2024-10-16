@@ -3,12 +3,30 @@
 @tailwind utilities;
 
 @layer base {
+  /* :root {
+    --radius: 0.5rem;
+    --color-font: #f9eded;
+    --color-background: #1b1b22;
+    --color-primary: #D13660;
+    --color-hover: #D23760;
+    --color-accent: #eB7C60;
+    --color-accent-hover: #C72D65
+  } */
+
   :root {
     --radius: 0.5rem;
+    --color-font: #f9eded;
+    --color-font-black: #333;
+    --color-background: #1b1b22;
+    --color-primary: #00ff99;
+    --color-hover: #1c1c22;
+    --color-accent: #00ff99;
+    --color-accent-hover: #00e187
   }
 
+
   body {
-    @apply font-primary bg-primary text-white leading-loose
+    @apply font-primary bg-background text-font leading-loose
   }
 
   .h1 {
@@ -28,6 +46,6 @@
   }
 
   .text-outline-hover {
-    -webkit-text-stroke: 1px #00ff99;
+    -webkit-text-stroke: 1px #D13660;
   }
 }

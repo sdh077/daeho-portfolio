@@ -22,8 +22,8 @@ const Services = ({ jobs }: { jobs: Job[] }) => {
               <div className='text-5xl font-extrabold text-outline text-transparent group-hover:text-outline-hover transition-all duration-500'>
                 {jobs.num}
               </div>
-              <Link href={jobs.href} className='w-[70px] h-[70px] rounded-full bg-white group-hover:bg-accent transition-all duration-500 flex justify-center items-center hover:-rotate-45'>
-                <ArrowBottomRightIcon className='text-primary w-8 h-8' />
+              <Link href={jobs.href} className='w-[70px] h-[70px] rounded-full bg-primary group-hover:bg-accent transition-all duration-500 flex justify-center items-center hover:-rotate-45'>
+                <ArrowBottomRightIcon className='text-font w-8 h-8' />
               </Link>
             </div>
             <h2 className='text-[32px] font-bold leading-none text-white group-hover:text-accent transition-all duration-500'>{jobs.title}</h2>

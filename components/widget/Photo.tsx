@@ -2,7 +2,7 @@
 
 import { motion } from 'framer-motion'
 import dynamic from "next/dynamic"
-const ComputersCanvas = dynamic(() => import('@/components/ui/canvas/Compouter'))
+const ComputersCanvas = dynamic(() => import('@/components/canvas/Computer'))
 
 const Photo = () => {
   return (

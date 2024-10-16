@@ -1,7 +1,7 @@
 'use client'
 
 import { Button } from "@/components/ui/button"
-import { Input } from "@/components/ui/input2"
+import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
 import { toast } from "@/hooks/use-toast"
 
@@ -161,7 +161,7 @@ const ContactForm = () => {
             </FormItem>
           )}
         />
-        <Button type="submit" size="md" className="max-w-40">Send message</Button>
+        <Button type="submit" className="max-w-40">Send message</Button>
       </form>
     </Form>
   )

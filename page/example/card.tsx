@@ -2,9 +2,9 @@
 
 import { CanvasRevealEffect } from '@/components/effect-ui/CanvasRevealEffect';
 import Image from "next/image";
-import { CardBody, CardContainer, CardItem } from "@/components/ui/3d-card";
+import { CardBody, CardContainer, CardItem } from "@/components/effect-ui/3d-card";
 import Link from "next/link";
-import Card from '@/components/ui/Card';
+import Card from '@/components/ui/card';
 import {
   useQueryClient,
   useQuery,
