@@ -52,23 +52,23 @@ const skills = {
     },
     {
       icon: <FaReact />,
-      name: ""
+      name: "React"
     },
     {
       icon: <FaFigma />,
-      name: ""
+      name: "Figma"
     },
     {
       icon: <FaNodeJs />,
-      name: ""
+      name: "Nodejs"
     },
     {
       icon: <SiTailwindcss />,
-      name: ""
+      name: "tailwind"
     },
     {
       icon: <SiNextdotjs />,
-      name: ""
+      name: "Nextjs"
     },
   ]
 }
@@ -93,7 +93,7 @@ const About = () => {
               <TooltipProvider delayDuration={100}>
                 <Tooltip>
                   <TooltipTrigger className='w-full h-[150px] bg-[#232329] rounded-xl flex justify-center items-center group gap-4'>
-                    <div className='text-6xl group-hover:text-accent transition-all duration-300'>{skill.icon}</div>
+                    <div className='text-6xl text-primary group-hover:text-accent transition-all duration-300'>{skill.icon}</div>
                   </TooltipTrigger>
                   <TooltipContent>
                     <p className='capitalize '>{skill.name}</p>
