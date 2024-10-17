@@ -4,7 +4,7 @@ import Nav from './Nav';
 import { Button } from '../ui/button';
 import MobileNav from './MobileNav';
 import Logo from './Logo';
-import { ModeToggle } from './mode-toggle';
+import { ModeToggle } from '../mode-toggle';
 
 export type LinkType = {
   name: string;
@@ -51,6 +51,7 @@ const Header = () => {
           <div className="lg:hidden ">
             <MobileNav links={links} />
           </div>
+          <ModeToggle />
         </div>
       </div>
     </header>

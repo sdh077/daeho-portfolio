@@ -26,9 +26,9 @@ const Services = ({ jobs }: { jobs: Job[] }) => {
                 <ArrowBottomRightIcon className='text-font w-8 h-8' />
               </Link>
             </div>
-            <h2 className='text-[32px] font-bold leading-none text-white group-hover:text-accent transition-all duration-500'>{jobs.title}</h2>
+            <h2 className='text-[32px] font-bold leading-none text-font group-hover:text-accent transition-all duration-500'>{jobs.title}</h2>
             <p>{jobs.duration}</p>
-            <pre className='text-white/60'>{jobs.describe}</pre>
+            <pre className='text-font/60'>{jobs.describe}</pre>
             <div className='border-b border-white/20 w-full' />
           </div>
         )}

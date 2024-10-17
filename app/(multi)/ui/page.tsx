@@ -17,7 +17,7 @@ const Ui = async () => {
   const { files } = await getFile()
   const UiPage = dynamic(() => import("@/page/Ui"))
   return (
-    <section className="bg-neutral-800 ">
+    <section className=" ">
       <UiPage links={files} />
     </section>
   )

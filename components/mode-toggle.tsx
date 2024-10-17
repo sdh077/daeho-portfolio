@@ -2,7 +2,6 @@
 
 import * as React from "react"
 import { Moon, Sun } from "lucide-react"
-import { useTheme } from "next-themes"
 
 import { Button } from "@/components/ui/button"
 import {
@@ -13,7 +12,9 @@ import {
 } from "@/components/ui/dropdown-menu"
 
 export function ModeToggle() {
-  const { setTheme } = useTheme()
+  const setTheme = (theme: string) => {
+    document.querySelector("html")?.setAttribute("data-theme", theme);
+  }
 
   return (
     <DropdownMenu>
@@ -26,13 +27,16 @@ export function ModeToggle() {
       </DropdownMenuTrigger>
       <DropdownMenuContent align="end">
         <DropdownMenuItem onClick={() => setTheme("light")}>
-          Light
+          default
         </DropdownMenuItem>
-        <DropdownMenuItem onClick={() => setTheme("dark")}>
-          Dark
+        <DropdownMenuItem onClick={() => setTheme("airbnb")}>
+          airbnb
         </DropdownMenuItem>
-        <DropdownMenuItem onClick={() => setTheme("system")}>
-          System
+        <DropdownMenuItem onClick={() => setTheme("Kurly")}>
+          Kurly
+        </DropdownMenuItem>
+        <DropdownMenuItem onClick={() => setTheme("kakao")}>
+          kakao
         </DropdownMenuItem>
       </DropdownMenuContent>
     </DropdownMenu>

@@ -134,12 +134,12 @@ export const MobileSidebar = ({
                 ease: "easeInOut",
               }}
               className={cn(
-                "fixed h-full w-full inset-0 text-neutral-800 bg-neutral-900 p-10 z-[100] flex flex-col justify-between",
+                "fixed h-full w-full inset-0 text-font bg-background p-10 z-[100] flex flex-col justify-between",
                 className
               )}
             >
               <div
-                className="absolute right-10 top-10 z-50 text-neutral-100"
+                className="absolute right-10 top-10 z-50 text-font"
                 onClick={() => setOpen(!open)}
               >
                 <IconX />
@@ -167,7 +167,7 @@ export const SidebarLink = ({
     <Link
       href={link.href}
       className={cn(
-        "flex items-center justify-start gap-2  group/sidebar py-2 text-neutral-100",
+        "flex items-center justify-start gap-2  group/sidebar py-2 text-font",
         className
       )}
       {...props}

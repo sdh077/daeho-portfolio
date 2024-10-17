@@ -75,9 +75,9 @@ const ContactForm = () => {
   }
   return (
     <Form {...form}>
-      <form onSubmit={form.handleSubmit(onSubmit)} className="flex flex-col gap-6 p-10 bg-[#27272c] rounded-xl">
+      <form onSubmit={form.handleSubmit(onSubmit)} className="flex flex-col gap-6 p-10 rounded-xl">
         <h3 className="text-4xl text-accent">Let&apos;s work together</h3>
-        <p className="text-white/60">확인 후 바로 연락드리겠습니다.</p>
+        <p className="text-font/60">확인 후 바로 연락드리겠습니다.</p>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           <FormField
             control={form.control}

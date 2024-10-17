@@ -6,7 +6,7 @@ import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@/comp
 
 const about = {
   title: 'About me',
-  description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa, facilis!',
+  description: '',
   info: [
     {
       fieldName: 'Name',
@@ -106,11 +106,11 @@ const About = () => {
       </div>
       <div className='flex flex-col gap-[30px]'>
         <h3 className='text-4xl font-bold'>{about.title}</h3>
-        <p className='max-w-[600px] text-white/60 mx-auto lg:mx-0'>{about.description}</p>
+        <p className='max-w-[600px] text-font mx-auto lg:mx-0'>{about.description}</p>
         <ul className='grid grid-cols-1 lg:grid-cols-2 gap-y-6 max-w-[620px] mx-auto lg:mx-0'>
           {about.info.map(info =>
             <li key={info.fieldName} className='flex items-center justify-center lg:justify-start gap-4'>
-              <span className='text-white/60'>{info.fieldName}</span>
+              <span className='text-font/60'>{info.fieldName}</span>
               <span className='text-xl'>{info.fieldValue}</span>
             </li>
           )}

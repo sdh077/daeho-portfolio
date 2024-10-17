@@ -8,7 +8,7 @@ import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@/comp
 
 const about = {
   title: 'About me',
-  description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa, facilis!',
+  description: '',
   info: [
     {
       fieldName: 'Name',
@@ -155,7 +155,7 @@ const Resume = () => {
               <div className='flex flex-col gap-[30px]'>
                 <div className='flex flex-col gap-[30px] text-center lg:text-left'>
                   <h3 className='text-4xl font-bold'>{skills.title}</h3>
-                  <p className='max-w-[600px] text-white/60 mx-auto lg:mx-0'>{skills.description}</p>
+                  <p className='max-w-[600px] text-font/60 mx-auto lg:mx-0'>{skills.description}</p>
                 </div>
                 <ul className='grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4'>
                   {skills.list.map(skill =>

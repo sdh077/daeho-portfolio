@@ -5,6 +5,8 @@ import { JetBrains_Mono } from 'next/font/google'
 import Provider from "./provider";
 import AnalyticsComponent from './analytics'
 import { Toaster } from "@/components/ui/toaster";
+import dynamic from "next/dynamic";
+
 const jetbrainsMono = JetBrains_Mono({
   subsets: ["latin"],
   weight: ["100", "200", "300", "400", "500", "600", "700", "800"],
@@ -33,7 +35,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" >
+    <html lang="en" data-theme="theme3">
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased ${jetbrainsMono.variable}`}
       >

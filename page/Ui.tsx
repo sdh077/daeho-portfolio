@@ -15,7 +15,7 @@ export default function UiPage({ links }: { links: string[] }) {
   return (
     <div
       className={cn(
-        "-md flex flex-col sm:flex-row md:flex-row bg-neutral-800 w-full flex-1 max-w-7xl mx-auto",
+        "-md flex flex-col sm:flex-row md:flex-row w-full flex-1 max-w-7xl mx-auto gap-4",
       )}
     >
       <Sidebar open={open} setOpen={setOpen}>
@@ -29,6 +29,7 @@ export default function UiPage({ links }: { links: string[] }) {
           </div>
         </SidebarBody>
       </Sidebar>
+      <div className="bg-primary min-h-[60vh] w-[2px]" />
       <Dashboard />
     </div>
   );

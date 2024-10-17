@@ -7,6 +7,7 @@ import {
   QueryClientProvider,
 } from '@tanstack/react-query';
 import { FilterStoreProvider } from "@/stores/filter-store-provider";
+import { StoreInit } from "@/stores/store/init";
 const queryClient = new QueryClient()
 export default function Provider({ children, ...props }: { children: React.ReactNode }) {
   const [isMount, setMount] = useState(false)
@@ -20,6 +21,7 @@ export default function Provider({ children, ...props }: { children: React.React
   }
   return (
     <>
+      <StoreInit token='' />
       <FilterStoreProvider>
         <QueryClientProvider client={queryClient}>
           <ThemeProvider

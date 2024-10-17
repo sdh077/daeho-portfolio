@@ -13,7 +13,7 @@ const Input = React.forwardRef<HTMLInputElement, InputProps>(
       <input
         type={type}
         className={cn(
-          "flex h-9 w-full rounded-md border border-input bg-transparent px-3 py-1 text-sm shadow-sm transition-colors file:border-0 file:bg-transparent file:text-sm file:font-medium file:text-foreground placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:cursor-not-allowed disabled:opacity-50",
+          "flex h-9 w-full rounded-md border border-input focus:border-primary bg-transparent px-3 py-1 text-sm shadow-sm transition-colors file:border-0 file:bg-transparent file:text-sm file:font-medium file:text-foreground placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-0 focus-visible:ring-ring disabled:cursor-not-allowed disabled:opacity-50",
           className
         )}
         ref={ref}
@@ -37,13 +37,13 @@ export const FloatingInput = React.forwardRef<HTMLInputElement, FloatingInputPro
             id={uuid}
             type={type}
             className={cn(
-              "peer block h-18 w-full rounded-md border border-input bg-transparent px-3 py-4 text-sm shadow-sm transition-colors file:border-0 file:bg-transparent file:text-sm file:font-medium file:text-foreground placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:cursor-not-allowed disabled:opacity-50",
+              "peer block h-18 w-full rounded-md border border-input bg-transparent px-3 py-4 text-sm shadow-sm transition-colors file:border-0 file:bg-transparent file:text-sm file:font-medium file:text-foreground placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring focus-visible:ring-primary disabled:cursor-not-allowed disabled:opacity-50",
               className
             )}
             ref={ref}
             {...props}
           />
-          <label htmlFor={uuid} className="absolute left-8 top-[50%] -translate-y-[50%] transition-all peer-focus:-translate-y-6 peer-focus:top-4 peer-focus:bg-black peer-focus:text-sm">
+          <label htmlFor={uuid} className="absolute left-8 top-[50%] -translate-y-[50%] transition-all peer-focus:-translate-y-6 peer-focus:top-4 peer-focus:bg-background peer-focus:text-sm">
             {label}
           </label>
         </div>

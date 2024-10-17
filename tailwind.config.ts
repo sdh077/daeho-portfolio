@@ -36,7 +36,11 @@ const config = {
 		},
 		extend: {
 			colors: {
-				font: { DEFAULT: 'var(--color-font)', black: 'var(--color-font-black)' },
+				font: {
+					DEFAULT: 'var(--color-font)',
+					toggle: 'var(--color-font-toggle)',
+					over: 'var(--color-primary-over)'
+				},
 				background: 'var(--color-background)',
 				primary: 'var(--color-primary)',
 				accent: {

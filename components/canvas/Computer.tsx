@@ -32,7 +32,7 @@ const Soldier = ({ ...props }) => {
     console.log(nodes, materials)
   }, [materials])
   return (
-    <mesh  >
+    <mesh scale={props.scale}>
       <spotLight position={[0, 15, 0]} angle={0.3} penumbra={1} castShadow intensity={2} shadow-bias={-0.0001} />
       <primitive object={scene} {...props} />
       <Environment frames={1} resolution={256} background={false} blur={1}>
@@ -41,13 +41,13 @@ const Soldier = ({ ...props }) => {
     </mesh >
   )
 }
-const SoldierCanvas = () => {
+const SoldierCanvas = ({ scale = 1.6 }: { scale: number }) => {
   return (
     <Canvas shadows camera={{ position: [5, 0, 15], fov: 30 }} className="w-full h-full">
       <OrbitControls />
       <ambientLight intensity={1} />
 
-      <Soldier scale={1.6} position={[-0.5, -0.18, 0]} rotation={[0, Math.PI / 5, 0]} />
+      <Soldier scale={scale} position={[-0.5, -0.18, 0]} rotation={[0, Math.PI / 5, 0]} />
     </Canvas>
   )
 };
