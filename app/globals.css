@@ -17,6 +17,7 @@
     --radius: 0.5rem;
     --color-font: #f9eded;
     --color-font-toggle: #333;
+    --color-foreground: #fff;
     --color-background: #1b1b22;
     --color-primary: #00ff99;
     --color-primary-over: #333;
@@ -28,7 +29,8 @@
   html[data-theme="airbnb"] {
     --radius: 0.5rem;
     --color-font: #222222;
-    --color-font-toggle: #333;
+    --color-font-toggle: #fff;
+    --color-foreground: #333;
     --color-background: #fff;
     --color-primary: #D13660;
     --color-primary-over: #FFFFFF;
@@ -40,7 +42,8 @@
   html[data-theme="kakao"] {
     --radius: 0.5rem;
     --color-font: #191919;
-    --color-font-toggle: #333;
+    --color-font-toggle: #fff;
+    --color-foreground: #333;
     --color-background: #fff;
     --color-primary: #FEE500;
     --color-primary-over: #333;
@@ -52,6 +55,7 @@
   html[data-theme="kurly"] {
     --radius: 0.5rem;
     --color-font: #f9eded;
+    --color-foreground: #333;
     --color-background: #1b1b22;
     --color-primary: #D13660;
     --color-hover: #D23760;

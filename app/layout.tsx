@@ -6,6 +6,7 @@ import Provider from "./provider";
 import AnalyticsComponent from './analytics'
 import { Toaster } from "@/components/ui/toaster";
 import dynamic from "next/dynamic";
+import { cookies } from "next/headers";
 
 const jetbrainsMono = JetBrains_Mono({
   subsets: ["latin"],
@@ -34,8 +35,9 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const theme = cookies().get('theme')?.value ?? 'light'
   return (
-    <html lang="en" data-theme="theme3">
+    <html lang="en" data-theme={theme}>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased ${jetbrainsMono.variable}`}
       >

@@ -41,6 +41,7 @@ const config = {
 					toggle: 'var(--color-font-toggle)',
 					over: 'var(--color-primary-over)'
 				},
+				foreground: 'var(--color-foreground)',
 				background: 'var(--color-background)',
 				primary: 'var(--color-primary)',
 				accent: {

@@ -10,10 +10,12 @@ import {
   DropdownMenuItem,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu"
+import Cookies from "js-cookie"
 
 export function ModeToggle() {
   const setTheme = (theme: string) => {
     document.querySelector("html")?.setAttribute("data-theme", theme);
+    Cookies.set('theme', theme)
   }
 
   return (
