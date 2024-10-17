@@ -24,7 +24,7 @@ const Photo = () => {
           }}
           className='w-[298px] h-[298px] lg:w-[398px] lg:h-[398px] mix-blend-lighten absolute'>
           {/* <Image src={'/about.png'} alt='' priority quality={50} fill className='object-contain' /> */}
-          <ComputersCanvas />
+          <ComputersCanvas scale={1.6} />
         </motion.div>
 
         {/* circle */}
