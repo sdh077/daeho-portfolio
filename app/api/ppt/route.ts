@@ -1,11 +1,17 @@
 // pages/api/upload.ts
-import { NextApiRequest, NextApiResponse } from 'next';
-import formidable from 'formidable';
 import JSZip from 'jszip';
 import { parseStringPromise } from 'xml2js';
-import fs from 'fs';
-import path from 'path';
 import { NextRequest } from 'next/server';
+
+
+export const config = {
+  api: {
+    bodyParser: {
+      sizeLimit: '10mb', // 요청 크기 제한을 10MB로 설정
+    },
+  },
+};
+
 
 // XML 구조에서 텍스트 요소 추출
 function findTextElements(json: any): string[] {
