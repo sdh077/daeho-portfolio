@@ -12,35 +12,37 @@ const calsans = localFont({
 
 export default function Project() {
   return (
-    <TracingBeam className="px-6">
-      <div className="max-w-2xl mx-auto antialiased pt-4 relative">
-        {dummyContent.map((item, index) => (
-          <div key={`content-${index}`} className="mb-10">
+    <div className="container">
+      <TracingBeam className="px-6">
+        <div className="max-w-2xl mx-auto antialiased pt-4 relative">
+          {dummyContent.map((item, index) => (
+            <div key={`content-${index}`} className="mb-10">
 
-            <div className="flex justify-between">
-              <p className={twMerge(calsans.className, "text-xl mb-4")}>
-                {item.title}
-              </p>
-              <Link href={item.badge} className="bg-black text-white rounded-full text-sm w-fit px-4 py-1 mb-4">
-                사이트 이동
-              </Link>
+              <div className="flex justify-between">
+                <p className={twMerge(calsans.className, "text-xl mb-4")}>
+                  {item.title}
+                </p>
+                <Link href={item.badge} className="bg-black text-white rounded-full text-sm w-fit px-4 py-1 mb-4">
+                  사이트 이동
+                </Link>
+              </div>
+              <div className="text-sm  prose prose-sm dark:prose-invert">
+                {item?.image && (
+                  <Image
+                    src={item.image}
+                    alt="blog thumbnail"
+                    height="1000"
+                    width="1000"
+                    className="rounded-lg mb-10 object-cover"
+                  />
+                )}
+                {item.description}
+              </div>
             </div>
-            <div className="text-sm  prose prose-sm dark:prose-invert">
-              {item?.image && (
-                <Image
-                  src={item.image}
-                  alt="blog thumbnail"
-                  height="1000"
-                  width="1000"
-                  className="rounded-lg mb-10 object-cover"
-                />
-              )}
-              {item.description}
-            </div>
-          </div>
-        ))}
-      </div>
-    </TracingBeam>
+          ))}
+        </div>
+      </TracingBeam>
+    </div>
   );
 }
 

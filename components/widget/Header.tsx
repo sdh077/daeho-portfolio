@@ -28,6 +28,10 @@ const links: LinkType[] = [
     path: '/ui'
   },
   {
+    name: "deepzoom",
+    path: '/deepzoom'
+  },
+  {
     name: "contact",
     path: '/contact'
   },

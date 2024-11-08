@@ -14,7 +14,7 @@ export default function Layout({
       <div className='fixed w-full top-0 z-50'>
         <Header />
       </div>
-      <div className='h-16' />
+      <div className='h-20' />
       <StairTransition />
       <PageTransition>
         {children}

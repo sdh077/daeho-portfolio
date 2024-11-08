@@ -1,6 +1,8 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-
+  experimental: {
+    serverComponentsExternalPackages: ['puppeteer-core'],
+  },
   transpilePackages: ["three"],
   images: {
     remotePatterns: [
@@ -27,6 +29,16 @@ const nextConfig = {
       }, {
         protocol: 'https',
         hostname: 'assets.aceternity.com',
+        port: '',
+        pathname: '/**',
+      }, {
+        protocol: 'https',
+        hostname: 'product-image.kurly.com',
+        port: '',
+        pathname: '/**',
+      }, {
+        protocol: 'https',
+        hostname: 'img-cf.kurly.com',
         port: '',
         pathname: '/**',
       },
