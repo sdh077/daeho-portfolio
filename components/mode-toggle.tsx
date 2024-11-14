@@ -34,7 +34,7 @@ export function ModeToggle() {
         <DropdownMenuItem onClick={() => setTheme("airbnb")}>
           airbnb
         </DropdownMenuItem>
-        <DropdownMenuItem onClick={() => setTheme("Kurly")}>
+        <DropdownMenuItem onClick={() => setTheme("kurly")}>
           Kurly
         </DropdownMenuItem>
         <DropdownMenuItem onClick={() => setTheme("kakao")}>

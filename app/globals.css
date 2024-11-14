@@ -55,13 +55,15 @@
 
   html[data-theme="kurly"] {
     --radius: 0.5rem;
-    --color-font: #f9eded;
-    --color-foreground: #333;
-    --color-background: #1b1b22;
-    --color-primary: #d13660;
-    --color-hover: #d23760;
-    --color-accent: #eb7c60;
-    --color-accent-hover: #c72d65;
+    --color-font: #333333;
+    --color-font-toggle: #fff;
+    --color-foreground: #000;
+    --color-background: #fff;
+    --color-primary: #650F84;
+    --color-primary-over: #FAF2FF;
+    --color-hover: #650F84;
+    --color-accent: #BD76FF;
+    --color-accent-hover: #BD76FF;
   }
 
   body {
