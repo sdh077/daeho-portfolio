@@ -1,5 +1,5 @@
 import React from 'react'
-import Header from '@/components/widget/Header';
+import Header from '@/widget/Header';
 import PageTransition from '@/components/PageTransition';
 import StairTransition from '@/components/StairTransition';
 

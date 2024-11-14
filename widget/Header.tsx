@@ -1,10 +1,10 @@
 import React from 'react'
 import Link from "next/link";
 import Nav from './Nav';
-import { Button } from '../ui/button';
+import { Button } from '@/components/ui/button';
 import MobileNav from './MobileNav';
 import Logo from './Logo';
-import { ModeToggle } from '../mode-toggle';
+import { ModeToggle } from '../components/mode-toggle';
 
 export type LinkType = {
   name: string;
@@ -20,8 +20,8 @@ const links: LinkType[] = [
     path: '/experience'
   },
   {
-    name: "ui",
-    path: '/ui'
+    name: "design system",
+    path: '/design-system'
   },
   {
     name: "deepzoom",
@@ -36,7 +36,7 @@ const links: LinkType[] = [
 
 const Header = () => {
   return (
-    <header className='py-2 xl:py-4 bg-background'>
+    <header className='py-2 xl:py-4 bg-background z-50'>
       <div className='container mx-auto flex justify-between items-center'>
         <Link href={'/'}>
           <h1 className='text-4xl font-semibold'>

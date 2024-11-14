@@ -1,5 +1,4 @@
 import type { Config } from "tailwindcss";
-
 const svgToDataUri = require("mini-svg-data-uri");
 
 const colors = require("tailwindcss/colors");
@@ -15,6 +14,7 @@ const config = {
 		"./app/**/*.{ts,tsx}",
 		"./src/**/*.{ts,tsx}",
 		"./data/**/*.{ts,tsx}",
+		"./widget/**/*.{ts,tsx}",
 	],
 	prefix: "",
 	theme: {
@@ -35,6 +35,13 @@ const config = {
 			}
 		},
 		extend: {
+			screens: {
+				sm: '640px',
+				md: '768px',
+				lg: '1024px',
+				xl: '1280px',
+				'2xl': '1536px'
+			},
 			colors: {
 				font: {
 					DEFAULT: 'var(--color-font)',
