@@ -20,10 +20,6 @@ const links: LinkType[] = [
     path: '/experience'
   },
   {
-    name: "resume",
-    path: '/resume'
-  },
-  {
     name: "ui",
     path: '/ui'
   },
