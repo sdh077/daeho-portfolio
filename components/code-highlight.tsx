@@ -3,8 +3,8 @@ import React, { useState } from 'react';
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
 import { atomDark } from 'react-syntax-highlighter/dist/esm/styles/prism';
 
-const CodeDisplay = ({ code }: { code: string }) => {
-  const [isExpanded, setIsExpanded] = useState(false);
+const CodeDisplay = ({ code, expand = true, language = "typescript" }: { code: string, expand?: boolean, language?: string }) => {
+  const [isExpanded, setIsExpanded] = useState(expand);
 
   const handleToggle = () => {
     setIsExpanded(!isExpanded);
@@ -13,11 +13,11 @@ const CodeDisplay = ({ code }: { code: string }) => {
   return (
     <div className='w-full'>
       <button onClick={handleToggle}>
-        {isExpanded ? 'Collapse' : 'Expand'}
+        {isExpanded ? 'Code Collapse' : 'Code Expand'}
       </button>
       {isExpanded && (
-        <div className='overflow-x-auto w-full h-[400px]'>
-          <SyntaxHighlighter language="typescript" style={atomDark}>
+        <div className='overflow-x-auto w-full min-h-[100px]'>
+          <SyntaxHighlighter language={language} style={atomDark}>
             {code}
           </SyntaxHighlighter>
         </div>

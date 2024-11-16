@@ -1,35 +1,63 @@
-import { Button } from '@/components/ui/button'
+
 import React from 'react'
+import fs from 'fs';
+import path from 'path';
+import ComponentOption from './component-option'
+import CodeDisplay from '@/components/code-highlight';
+import { TypographyH4 } from '@/widget/typography';
+import { Button, buttonVariants } from '@/components/ui/button';
+import { BsStar } from 'react-icons/bs';
 const ButtonExample = () => {
-  const attributes = [
-    { key: 'padding x', value: '1rem' },
-    { key: 'padding y', value: '0.75rem' },
-    { key: 'padding h', value: '2.5rem' },
-    // {
-    //   default: "h-10 px-4 py-2",
-    //   sm: "h-9 rounded-md px-3",
-    //   lg: "h-11 rounded-md px-8",
-    //   icon: "h-10 w-10",
-    // }
-  ]
+  const filePath = path.join(process.cwd(), 'components/ui/button.tsx');
+  const fileContent = fs.readFileSync(filePath, 'utf-8');
   return (
     <div>
-      <SizeTable attributes={attributes} />
-      <div className='flex flex-col sm:flex-row gap-4 w-full '>
-        <Button variant={'default'} >default</Button>
-        <Button variant={'ghost'} >ghost</Button>
-        <Button variant={'outline'} >outline</Button>
-      </div>
+      <ButtonView code={fileContent} />
+      <ComponentOption />
     </div>
   )
 }
-const SizeTable = ({ attributes }: { attributes: { key: string, value: string }[] }) => {
+type Size = "default" | "sm" | "lg" | "icon" | null | undefined
+type Variant = "link" | "default" | "ghost" | "outline" | "disabled" | "destructive" | "secondary" | null | undefined
+function ButtonView({ code }: { code: string }) {
+  const sizes: Size[] = ['default',
+    'sm',
+    'lg',
+    'icon',]
+  const variants: Variant[] = ['default',
+    'ghost',
+    'link',
+    'outline',
+    'disabled',]
   return (
-    <div className='grid grid-cols-4'>
-      {attributes.map((attribute) =>
-        <div key={attribute.key}>{attribute.key} / {attribute.value}</div>
-      )}
+    <div className='w-full'>
+      <div className='grid grid-cols-6 justify-between gap-8'>
+        <div></div>
+        <TypographyH4>default</TypographyH4>
+        <TypographyH4>ghost</TypographyH4>
+        <TypographyH4>link</TypographyH4>
+        <TypographyH4>outline</TypographyH4>
+        <TypographyH4>disabled</TypographyH4>
+        {
+          sizes.map(size =>
+            <React.Fragment key={size}>
+              <div>{size}</div>
+              {variants.map(variant =>
+                <div key={`${size}-${variant}`}>
+                  <Button
+                    size={size}
+                    variant={variant}
+                  >{size === 'icon' ? <BsStar /> : size}</Button>
+                </div>
+              )}
+            </React.Fragment>
+
+          )
+        }
+      </div>
+      <CodeDisplay code={code} expand={false} />
     </div>
+
   )
 }
 

@@ -9,12 +9,9 @@ import { ModeToggle } from '../components/mode-toggle';
 export type LinkType = {
   name: string;
   path: string;
+  items?: LinkType[]
 }
 const links: LinkType[] = [
-  {
-    name: "home",
-    path: '/'
-  },
   {
     name: "Experience",
     path: '/experience'
@@ -24,8 +21,19 @@ const links: LinkType[] = [
     path: '/design-system'
   },
   {
-    name: "deepzoom",
-    path: '/deepzoom'
+    name: "demos",
+    path: '/demos',
+    items: [
+      {
+        name: "deepzoom",
+        path: '/demos/deepzoom'
+      },
+      {
+        name: "kurly",
+        path: '/demos/kurly'
+      },
+
+    ]
   },
   {
     name: "contact",

@@ -6,7 +6,6 @@ import config from "tailwindcss/defaultConfig";
 import { Config } from "tailwindcss";
 
 export default async function Page() {
-  console.log(config.theme?.screens)
   if (!config.theme) return <></>
   const spacing = Object.entries(config.theme.spacing as Config)
   return (

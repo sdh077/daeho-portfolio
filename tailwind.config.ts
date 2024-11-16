@@ -50,7 +50,11 @@ const config = {
 				},
 				foreground: 'var(--color-foreground)',
 				background: 'var(--color-background)',
-				primary: 'var(--color-primary)',
+				primary: {
+					DEFAULT: 'var(--color-primary)',
+					hover: 'var(--color-hover)',
+					accent: 'var(--color-accent)',
+				},
 				accent: {
 					DEFAULT: 'var(--color-accent)',
 					hover: 'var(--color-accent-hover)',

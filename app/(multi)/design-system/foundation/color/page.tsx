@@ -1,5 +1,6 @@
 import config from '@/tailwind.config'
 import { TypographyH2, TypographyH3, TypographyH4 } from '@/widget/typography'
+import { MakeColor } from './make-color'
 
 const defaultColors = {
   rose: {
@@ -270,6 +271,7 @@ const defaultColors = {
 export default async function Page() {
   return (
     <>
+      <MakeColor />
       <CustomColors />
       <BgColors />
       <DefaultColors />
@@ -282,7 +284,8 @@ function CustomColors() {
       <TypographyH2>BRAND</TypographyH2>
       <div className='grid grid-cols-5'>
         <div className='bg-primary h-36 text-font-over'>primary</div>
-        <div className='bg-accent h-36 text-font-over'>primary-accent</div>
+        <div className='bg-primary-hover h-36 text-font-over'>primary hover</div>
+        <div className='bg-primary-accent h-36 text-font-over'>primary accent</div>
       </div>
     </section>
   )

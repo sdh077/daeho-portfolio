@@ -40,6 +40,10 @@ const sides: SideGroup[] = [
         url: "#",
       },
       {
+        title: "form",
+        url: "#",
+      },
+      {
         title: "navbar",
         url: "#",
       },
