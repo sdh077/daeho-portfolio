@@ -10,6 +10,8 @@ import 'swiper/css';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 import { cn } from '@/lib/utils';
 import { Button } from '@/components/ui/button';
+import Link from 'next/link';
+import { usePathname } from 'next/navigation';
 export default ({ products }: { products: CollectionProduct[] }) => {
   const [shareSwiper, setSwiper] = useState<SwiperClass>()
   return (
@@ -32,6 +34,7 @@ export default ({ products }: { products: CollectionProduct[] }) => {
   );
 };
 function ProductCard({ product }: { product: CollectionProduct }) {
+  const pathname = usePathname()
   const stickers = product.stickers
   const position = {
     "TOP_LEFT_TEXT": "top-1 left-1",
@@ -39,16 +42,18 @@ function ProductCard({ product }: { product: CollectionProduct }) {
   }
 
   return (
-    <div className='flex flex-col gap-1'>
+    <Link
+      href={`${pathname}?goods=${product.no}`}
+      className='flex flex-col gap-1'>
       <div className='relative w-full' >
         <Image src={product.list_image_url} alt='상품 이미지' width={800} height={320} className='rounded-sm relative transition-all duration-300 ease-in-out hover:scale-[101%]' />
         {stickers.map(content =>
           <div key={content.content.contents[0].text}
             style={{
-              backgroundColor: content.content.background_color_code,
+              // backgroundColor: content.content.background_color_code,
               opacity: content.content.background_opacity
             }}
-            className={cn(position[content.type], "absolute  text-white px-1.5 py-1 font-bold rounded-sm")}
+            className={cn(position[content.type], "bg-primary absolute  text-white px-1.5 py-1 font-bold rounded-sm")}
           >
             {content.content.contents[0].text}
           </div>
@@ -60,16 +65,16 @@ function ProductCard({ product }: { product: CollectionProduct }) {
         {product.name}
       </div>
       <div className='flex flex-col'>
-        <span className='text-[#b5b5b5] line-through leading-4'>{product.sales_price}</span>
+        <span className='text-font/50 line-through leading-4'>{product.sales_price}</span>
         <div className='flex gap-2 font-semibold leading-4'>
           <span className='text-[red]'>{product.discount_rate}%</span>
           <span>{product.discounted_price}</span>
         </div>
       </div>
-      <div className='text-[#b5b5b5]'>
+      <div className='text-font/50'>
         {product.review_count}
       </div>
-    </div>
+    </Link>
   )
 }
 function SlideAction({ setSw }: { setSw: Dispatch<SetStateAction<SwiperClass | undefined>> }) {

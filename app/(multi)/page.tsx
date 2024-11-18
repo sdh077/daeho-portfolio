@@ -6,7 +6,7 @@ import { getStore, setStore } from "@/stores/store";
 const Page = () => {
   return (
     <section className="">
-      <div className="h-screen flex flex-col">
+      <div className="h-[80vh] flex flex-col">
         <Profile />
         <Stats />
       </div>

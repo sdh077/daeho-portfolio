@@ -41,7 +41,13 @@ const nextConfig = {
         hostname: 'img-cf.kurly.com',
         port: '',
         pathname: '/**',
-      },
+      }, {
+        protocol: 'https',
+        hostname: '3p-image.kurly.com',
+        port: '',
+        pathname: '/**',
+
+      }
     ],
   },
 };

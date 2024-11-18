@@ -61,17 +61,17 @@ const dummyContent = [
       '/preview/church.png',
   },
   {
-    title: "스타 맛집",
+    title: "The place",
     description: (
       <>
         <p>
-          인기 유투버 또는 예능에서 나온 음식점 정보를 보여주는 사이트
+          서울 맛집 소개
         </p>
       </>
     ),
-    badge: "https://culinarywar.vercel.app/",
+    badge: "https://www.dayerd.com/",
     image:
-      '/preview/culinary.png',
+      '/preview/theplace.png',
   },
   {
     title: "로또 명당",
