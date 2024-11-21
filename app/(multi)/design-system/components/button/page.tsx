@@ -8,19 +8,18 @@ import { TypographyH4 } from '@/widget/typography';
 import { Button, buttonVariants } from '@/components/ui/button';
 import { BsStar } from 'react-icons/bs';
 const ButtonExample = () => {
-  console.log(process.cwd())
-  const filePath = path.join(process.cwd(), '/components/ui/button.tsx');
-  const fileContent = fs.readFileSync(filePath, 'utf-8');
+  // const filePath = path.join(process.cwd(), '/components/ui/button.tsx');
+  // const fileContent = fs.readFileSync(filePath, 'utf-8');
   return (
     <div>
-      <ButtonView code={fileContent} />
+      <ButtonView />
       <ComponentOption />
     </div>
   )
 }
 type Size = "default" | "sm" | "lg" | "icon" | null | undefined
 type Variant = "link" | "default" | "ghost" | "outline" | "disabled" | "destructive" | "secondary" | null | undefined
-function ButtonView({ code }: { code: string }) {
+function ButtonView() {
   const sizes: Size[] = ['default',
     'sm',
     'lg',
@@ -56,7 +55,7 @@ function ButtonView({ code }: { code: string }) {
           )
         }
       </div>
-      <CodeDisplay code={code} expand={false} />
+      {/* <CodeDisplay code={code} expand={false} /> */}
     </div>
 
   )

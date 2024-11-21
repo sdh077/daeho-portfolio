@@ -11,14 +11,14 @@ import { Textarea } from '@/components/ui/textarea';
 import { RadioGroup, RadioGroupItem } from '@/components/ui/radio-group';
 import { Label } from '@/components/ui/label';
 const ButtonExample = () => {
-  const textareaFilePath = path.join(process.cwd(), 'components/ui/textarea.tsx');
-  const textareaFileContent = fs.readFileSync(textareaFilePath, 'utf-8');
-  const radioFilePath = path.join(process.cwd(), 'components/ui/radio-group.tsx');
-  const radioFileContent = fs.readFileSync(radioFilePath, 'utf-8');
+  // const textareaFilePath = path.join(process.cwd(), 'components/ui/textarea.tsx');
+  // const textareaFileContent = fs.readFileSync(textareaFilePath, 'utf-8');
+  // const radioFilePath = path.join(process.cwd(), 'components/ui/radio-group.tsx');
+  // const radioFileContent = fs.readFileSync(radioFilePath, 'utf-8');
   return (
     <div>
-      <TextareaView code={textareaFileContent} />
-      <RadioView code={radioFileContent} />
+      <TextareaView code={'textareaFileContent'} />
+      <RadioView code={'radioFileContent'} />
     </div>
   )
 }
@@ -27,7 +27,7 @@ function TextareaView({ code }: { code: string }) {
     <div className='w-full flex flex-col gap-8'>
       <TypographyH4>Textarea</TypographyH4>
       <Textarea defaultValue={'Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat, ipsam.'} />
-      <CodeDisplay code={code} expand={false} />
+      {/* <CodeDisplay code={code} expand={false} /> */}
     </div>
   )
 }
@@ -49,7 +49,7 @@ function RadioView({ code }: { code: string }) {
           <Label htmlFor="r3">Compact</Label>
         </div>
       </RadioGroup>
-      <CodeDisplay code={code} expand={false} />
+      {/* <CodeDisplay code={code} expand={false} /> */}
     </div>
   )
 }
