@@ -8,7 +8,8 @@ import { TypographyH4 } from '@/widget/typography';
 import { Button, buttonVariants } from '@/components/ui/button';
 import { BsStar } from 'react-icons/bs';
 const ButtonExample = () => {
-  const filePath = path.join(process.cwd(), 'components/ui/button.tsx');
+  console.log(process.cwd())
+  const filePath = path.join(process.cwd(), '/components/ui/button.tsx');
   const fileContent = fs.readFileSync(filePath, 'utf-8');
   return (
     <div>

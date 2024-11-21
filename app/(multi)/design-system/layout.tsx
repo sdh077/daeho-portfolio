@@ -52,7 +52,7 @@ const sides: SideGroup[] = [
 ]
 export default async function Layout({ children }: { children: React.ReactNode }) {
   const cookieStore = await cookies()
-  const defaultOpen = cookieStore.get("sidebar:state")?.value === "true"
+  const defaultOpen = cookieStore.get("sidebar:state") ? cookieStore.get("sidebar:state")?.value === "true" : true
 
   return (
     <SidebarProvider defaultOpen={defaultOpen}>
