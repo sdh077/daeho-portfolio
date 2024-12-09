@@ -6,7 +6,7 @@ export async function POST(request: Request) {
 
   const { data: user, error: error1 } = await supabase
     .from('chatbot_user')
-    .insert({
+    .upsert({
       ...body.userRequest.user
     })
     .select()
