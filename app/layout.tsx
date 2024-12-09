@@ -1,13 +1,13 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
-import { JetBrains_Mono } from 'next/font/google'
 import Provider from "./provider";
 import AnalyticsComponent from './analytics'
 import { Toaster } from "@/components/ui/toaster";
 import dynamic from "next/dynamic";
 import { cookies } from "next/headers";
 
+import { JetBrains_Mono } from 'next/font/google'
 const jetbrainsMono = JetBrains_Mono({
   subsets: ["latin"],
   weight: ["100", "200", "300", "400", "500", "600", "700", "800"],
