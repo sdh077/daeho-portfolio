@@ -3,12 +3,12 @@ import { createClient } from "@/lib/supabase/server"
 export async function POST(request: Request) {
   const body = await request.json()
   const supabase = await createClient()
-  const { data: action } = await supabase
+  const { data: action, error: error1 } = await supabase
     .from('chatbot_action')
     .upsert({ ...body.action, bot_id: body.bot.id })
     .select()
 
-  const { data: intent } = await supabase
+  const { data: intent, error: error2 } = await supabase
     .from('chatbot_action')
     .upsert({ ...body.intent, bot_id: body.bot.id })
     .select()
@@ -24,6 +24,7 @@ export async function POST(request: Request) {
       bot_id: body.bot.id
     })
     .select()
+  console.log(error, error1, error2)
 
   return Response.json({ user })
 }
