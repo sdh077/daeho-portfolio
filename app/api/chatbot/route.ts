@@ -9,7 +9,7 @@ export async function POST(request: Request) {
     .select()
 
   const { data: intent, error: error2 } = await supabase
-    .from('chatbot_action')
+    .from('chatbot_intent')
     .upsert({ ...body.intent, bot_id: body.bot.id })
     .select()
 
