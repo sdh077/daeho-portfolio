@@ -4,7 +4,14 @@ export async function POST(request: Request) {
   const body = await request.json()
   const supabase = await createClient()
 
-  const { data: user, error } = await supabase
+  const { data: user, error: error1 } = await supabase
+    .from('chatbot_user')
+    .insert({
+      ...body.userRequest.user
+    })
+    .select()
+
+  const { data: req, error: error2 } = await supabase
     .from('chatbot_request')
     .insert({
       user_id: body.userRequest.user.id,
@@ -15,7 +22,7 @@ export async function POST(request: Request) {
       bot_id: body.bot.id
     })
     .select()
-  console.log(error)
+  console.log(error1, error2)
 
   return Response.json({ user })
 }
