@@ -23,14 +23,14 @@ const Photo = () => {
             opacity: 1,
             transition: { delay: 0.4, duration: 0.4, ease: "easeInOut" }
           }}
-          className='w-[162px] h-[162px] absolute left-8 top-8'>
+          className='w-[202px] h-[202px] absolute left-8 top-8'>
           <Image src={'/about.png'} alt='' priority quality={50} fill className='object-contain rounded-full' />
           {/* <ComputersCanvas scale={1.6} /> */}
         </motion.div>
 
         {/* circle */}
         <motion.svg
-          className='w-[222px] h-[222px]'
+          className='w-[272px] h-[272px]'
           fill='transparent'
           viewBox='0 0 202 202'
           xmlns='http://www.w3.org/2000/svg'
