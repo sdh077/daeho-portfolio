@@ -34,15 +34,12 @@ const Section1 = () => {
       <div />
       <div className="flex flex-col md:flex-row justify-around">
         <div className="flex flex-col gap-8 order-2 md:order-1">
-          <div className="text-2xl">
-            Web programmer <br />specializing in Nextjs and sveltekit
-          </div>
-          <div className="hidden md:flex text-5xl  flex-wrap md:flex-row gap-2 md:gap-8 md:w-[50vw]">
+          <div className="grid grid-cols-2 md:flex text-3xl flex-wrap md:flex-row gap-2 md:gap-8 md:w-[50vw]">
             {links.map(link =>
               <Button
                 key={link.title}
                 onClick={() => handleScroll(link.href)}
-                className="text-xs md:text-5xl px-4 py-2 rounded-full"
+                className="text-xs md:text-4xl px-4 py-2 rounded-full"
               >
                 {link.title}
               </Button>

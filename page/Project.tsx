@@ -12,7 +12,7 @@ const calsans = localFont({
 
 export default function Project() {
   return (
-    <div className="container overflow-hidden">
+    <div className="container overflow-hidden" id='portfolio'>
       <TracingBeam className="px-6">
         <div className="max-w-2xl mx-auto antialiased pt-4 relative">
           {dummyContent.map((item, index) => (
