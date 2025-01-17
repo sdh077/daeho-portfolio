@@ -79,12 +79,12 @@ const About = () => {
       animate={{
         opacity: 1,
         transition: {
-          delay: 2.4,
+          delay: 0.4,
           duration: 0.4,
           ease: 'easeIn'
         }
       }}
-      className='grid md:grid-cols-2 gap-8 mt-16 items-center justify-center pb-12  w-full'
+      className='grid md:grid-cols-2 gap-16 mt-16 items-center justify-center pb-12  w-full'
     >
       <div className='flex flex-col gap-[30px] w-full mb-8'>
         <ul className='grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-8'>
@@ -92,7 +92,7 @@ const About = () => {
             <li key={skill.name}>
               <TooltipProvider delayDuration={100}>
                 <Tooltip>
-                  <TooltipTrigger className='w-full h-[150px] bg-[#232329] rounded-xl flex justify-center items-center group gap-4'>
+                  <TooltipTrigger className='w-full h-[120px] bg-background border-2 border-foreground rounded-xl flex justify-center items-center group gap-4'>
                     <div className='text-6xl text-primary group-hover:text-accent transition-all duration-300'>{skill.icon}</div>
                   </TooltipTrigger>
                   <TooltipContent>
@@ -105,7 +105,7 @@ const About = () => {
         </ul>
       </div>
       <div className='flex flex-col gap-[30px]'>
-        <h3 className='text-4xl font-bold'>{about.title}</h3>
+        <h3 className='text-4xl font-bold text-center md:text-right'>{about.title}</h3>
         <p className='max-w-[600px] text-font mx-auto lg:mx-0'>{about.description}</p>
         <ul className='grid grid-cols-1 lg:grid-cols-2 gap-y-6 max-w-[620px] mx-auto lg:mx-0'>
           {about.info.map(info =>

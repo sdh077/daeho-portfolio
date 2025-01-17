@@ -2,7 +2,7 @@
 import Link from 'next/link'
 import { motion } from 'framer-motion'
 import { ArrowBottomRightIcon } from '@radix-ui/react-icons'
-import { Job } from '@/app/(multi)/experience/job'
+import { Job } from '@/app/multi/experience/job'
 
 
 const Services = ({ jobs }: { jobs: Job[] }) => {
@@ -17,7 +17,7 @@ const Services = ({ jobs }: { jobs: Job[] }) => {
         className='grid grid-cols-1 md:grid-cols-2 gap-[60px]'
       >
         {jobs.map(jobs =>
-          <div key={jobs.num} className='flex flex-1 flex-col justify-start gap-6 group'>
+          <div key={jobs.num} className='flex flex-1 flex-col justify-start gap-6 group w-full'>
             <div className='w-full flex justify-between items-center'>
               <div className='text-5xl font-extrabold text-outline text-transparent group-hover:text-outline-hover transition-all duration-500'>
                 {jobs.num}

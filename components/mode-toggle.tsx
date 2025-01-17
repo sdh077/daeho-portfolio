@@ -11,11 +11,14 @@ import {
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu"
 import Cookies from "js-cookie"
+import { useTheme } from "next-themes"
 
 export function ModeToggle() {
+  const { setTheme: setNextTheme } = useTheme()
   const setTheme = (theme: string) => {
     document.querySelector("html")?.setAttribute("data-theme", theme);
     Cookies.set('theme', theme)
+    setNextTheme(theme)
   }
 
   return (
@@ -29,16 +32,16 @@ export function ModeToggle() {
       </DropdownMenuTrigger>
       <DropdownMenuContent align="end">
         <DropdownMenuItem onClick={() => setTheme("light")}>
-          default
+          light
         </DropdownMenuItem>
-        <DropdownMenuItem onClick={() => setTheme("airbnb")}>
-          airbnb
+        <DropdownMenuItem onClick={() => setTheme("violet")}>
+          violet
         </DropdownMenuItem>
-        <DropdownMenuItem onClick={() => setTheme("kurly")}>
-          Kurly
+        <DropdownMenuItem onClick={() => setTheme("yellow")}>
+          yellow
         </DropdownMenuItem>
-        <DropdownMenuItem onClick={() => setTheme("kakao")}>
-          kakao
+        <DropdownMenuItem onClick={() => setTheme("dark")}>
+          dark
         </DropdownMenuItem>
       </DropdownMenuContent>
     </DropdownMenu>

@@ -2,7 +2,7 @@
 import Link from 'next/link'
 import { motion } from 'framer-motion'
 import { ArrowBottomRightIcon } from '@radix-ui/react-icons'
-import { Job } from '@/app/(multi)/experience/job'
+import { Job } from '@/app/multi/experience/job'
 import { Timeline } from '@/components/ui/timeline'
 import { Textarea } from '@/components/ui/textarea'
 

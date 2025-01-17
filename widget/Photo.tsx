@@ -13,7 +13,7 @@ const Photo = () => {
         initial={{ opacity: 0 }}
         animate={{
           opacity: 1,
-          transition: { delay: 2, duration: 0.4, ease: "easeInOut" }
+          transition: { delay: 0.2, duration: 0.4, ease: "easeInOut" }
         }}
       >
         {/* image */}
@@ -21,25 +21,25 @@ const Photo = () => {
           initial={{ opacity: 0 }}
           animate={{
             opacity: 1,
-            transition: { delay: 2.4, duration: 0.4, ease: "easeInOut" }
+            transition: { delay: 0.4, duration: 0.4, ease: "easeInOut" }
           }}
-          className='w-[338px] h-[338px] absolute left-8 top-8'>
+          className='w-[162px] h-[162px] absolute left-8 top-8'>
           <Image src={'/about.png'} alt='' priority quality={50} fill className='object-contain rounded-full' />
           {/* <ComputersCanvas scale={1.6} /> */}
         </motion.div>
 
         {/* circle */}
         <motion.svg
-          className='w-[404px] h-[404px]'
+          className='w-[222px] h-[222px]'
           fill='transparent'
-          viewBox='0 0 404 404'
+          viewBox='0 0 202 202'
           xmlns='http://www.w3.org/2000/svg'
         >
           <motion.circle
-            cx='202'
-            cy='202'
-            r='180'
-            stroke='#00ff99'
+            cx='101'
+            cy='101'
+            r='90'
+            stroke='var(--primary)'
             strokeWidth={4}
             strokeLinecap='round'
             strokeLinejoin='round'

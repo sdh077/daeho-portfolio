@@ -16,19 +16,6 @@
 
   :root {
     --radius: 0.5rem;
-    --color-font: #f9eded;
-    --color-font-toggle: #333;
-    --color-foreground: #fff;
-    --color-background: #1b1b22;
-    --color-primary: #00ff99;
-    --color-primary-over: #333;
-    --color-hover: #1c1c22;
-    --color-accent: #7bdfb7;
-    --color-accent-hover: #00e187;
-  }
-
-  html[data-theme="airbnb"] {
-    --radius: 0.5rem;
     --color-font: #222222;
     --color-font-toggle: #fff;
     --color-foreground: #333;
@@ -40,7 +27,20 @@
     --color-accent-hover: #c72d65;
   }
 
-  html[data-theme="kakao"] {
+  html[data-theme="dark"] {
+    --radius: 0.5rem;
+    --color-font: #f9eded;
+    --color-font-toggle: #333;
+    --color-foreground: #fff;
+    --color-background: #1b1b22;
+    --color-primary: #00ff99;
+    --color-primary-over: #333;
+    --color-hover: #1c1c22;
+    --color-accent: #7bdfb7;
+    --color-accent-hover: #00e187;
+  }
+
+  html[data-theme="yellow"] {
     --radius: 0.5rem;
     --color-font: #191919;
     --color-font-toggle: #fff;
@@ -53,7 +53,7 @@
     --color-accent-hover: #fee500;
   }
 
-  html[data-theme="kurly"] {
+  html[data-theme="violet"] {
     --radius: 0.5rem;
     --color-font: #333333;
     --color-font-toggle: #fff;
@@ -94,5 +94,9 @@
     font-family: "Noto Sans KR", sans-serif;
     font-optical-sizing: auto;
     font-style: normal;
+  }
+
+  html {
+    @apply scroll-smooth scrollbar-thin scrollbar-thumb-primary scrollbar-track-gray-200 overflow-y-auto
   }
 }

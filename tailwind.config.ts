@@ -66,6 +66,16 @@ const config = {
 				sm: 'calc(var(--radius) - 4px)'
 			},
 			keyframes: {
+				ripple: {
+					'0%': {
+						transform: 'scale(0)',
+						opacity: '0.5',
+					},
+					'100%': {
+						transform: 'scale(1)',
+						opacity: '0',
+					},
+				},
 				'accordion-down': {
 					from: {
 						height: '0'
@@ -137,7 +147,11 @@ const config = {
 					to: {
 						transform: 'translate(calc(-50% - 0.5rem))'
 					}
-				}
+				},
+				'slide-up': {
+					'0%': { transform: 'translateY(100%)', opacity: '0' },
+					'100%': { transform: 'translateY(0)', opacity: '1' },
+				},
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
@@ -149,11 +163,14 @@ const config = {
 				third: 'moveInCircle 40s linear infinite',
 				fourth: 'moveHorizontal 40s ease infinite',
 				fifth: 'moveInCircle 20s ease infinite',
-				scroll: 'scroll var(--animation-duration, 40s) var(--animation-direction, forwards) linear infinite'
+				scroll: 'scroll var(--animation-duration, 40s) var(--animation-direction, forwards) linear infinite',
+				ripple: "ripple var(600) ease-out",
+				'slide-up': 'slide-up 0.7s ease-out',
 			}
 		}
 	},
 	plugins: [
+		require('tailwind-scrollbar'),
 		require("tailwindcss-animate"),
 		addVariablesForColors,
 		function ({ matchUtilities, theme }: any) {

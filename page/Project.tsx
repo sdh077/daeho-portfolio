@@ -12,7 +12,7 @@ const calsans = localFont({
 
 export default function Project() {
   return (
-    <div className="container">
+    <div className="container overflow-hidden">
       <TracingBeam className="px-6">
         <div className="max-w-2xl mx-auto antialiased pt-4 relative">
           {dummyContent.map((item, index) => (
@@ -72,19 +72,6 @@ const dummyContent = [
     badge: "https://www.dayerd.com/",
     image:
       '/preview/theplace.png',
-  },
-  {
-    title: "로또 명당",
-    description: (
-      <>
-        <p>
-          전체 로또 1등 통계 정보 사이트
-        </p>
-      </>
-    ),
-    badge: "https://lotto-famous.vercel.app/",
-    image:
-      '/preview/lotto.png',
   },
   {
     title: "reonai",
