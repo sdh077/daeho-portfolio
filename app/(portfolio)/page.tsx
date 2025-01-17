@@ -7,10 +7,26 @@ import About from "@/page/About";
 import Contact from "../contact/page";
 import ScrollArrow from "@/components/scroll-arrow";
 import { handleScroll } from "@/lib/utils";
-import { links } from "./layout";
 import Services from "./about/page";
 import Project from "@/page/Project";
-
+const links = [
+  {
+    title: "About ME",
+    href: "about",
+  },
+  {
+    title: "Experience",
+    href: "experience",
+  },
+  {
+    title: "Contact",
+    href: "contact",
+  },
+  {
+    title: "Portfolio",
+    href: "portfolio",
+  },
+];
 const Section1 = () => {
 
   return (

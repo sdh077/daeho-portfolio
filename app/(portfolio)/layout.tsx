@@ -1,26 +1,8 @@
 import React from 'react'
 import { ModeToggle } from "@/components/mode-toggle";
-import { SideMenu } from "@/components/side-menu";
 import Link from "next/link";
 
-export const links = [
-  {
-    title: "About ME",
-    href: "about",
-  },
-  {
-    title: "Experience",
-    href: "experience",
-  },
-  {
-    title: "Contact",
-    href: "contact",
-  },
-  {
-    title: "Portfolio",
-    href: "portfolio",
-  },
-];
+
 
 const layout = ({ children }: { children: React.ReactNode }) => {
   return (
