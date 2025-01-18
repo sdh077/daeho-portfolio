@@ -9,6 +9,7 @@ import ScrollArrow from "@/components/scroll-arrow";
 import { handleScroll } from "@/lib/utils";
 import Services from "./about/page";
 import Project from "@/page/Project";
+import Link from "next/link";
 const links = [
   {
     title: "About ME",
@@ -52,7 +53,7 @@ const Section1 = () => {
       </div>
 
       <div className="flex justify-between">
-        <div>WELCOME</div>
+        <Link href={'/adventure'}>THREE.js</Link>
         <div>sdh077@naver.com</div>
       </div>
       <ScrollArrow />

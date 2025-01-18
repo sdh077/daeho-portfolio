@@ -48,6 +48,7 @@
     "js-cookie": "^2.2.1",
     "jszip": "^3.10.1",
     "lamina": "^1.1.23",
+    "lil-gui": "^0.20.0",
     "lucide-react": "^0.447.0",
     "mini-svg-data-uri": "^1.4.4",
     "next": "14.2.16",
